@@ -54,3 +54,6 @@ docs/_build/
 
 # ipynb
 .ipynb_checkpoints/
+
+# vi
+.*.swp
