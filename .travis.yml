@@ -14,6 +14,6 @@ before_install:
 install:
   - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas IPython
   - source activate env_name
-  - pip install scikit-bio runipy
+  - pip install scikit-bio runipy six
 script:
   - python runipynbs.py
