@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # ----------------------------------------------------------------------------
 # Copyright (c) 2013--, scikit-bio development team.
 #
@@ -19,7 +17,7 @@ def cookbook_toc():
     nb_paths = [fp for fp in glob('*.ipynb') if fp != "Index.ipynb"]
     for nb_path in nb_paths:
         title = splitext(nb_path)[0]
-        toc.append("<li><a href='%s'  target='_blank'>%s</a></li>" % \
+        toc.append("<li><a href='%s'  target='_blank'>%s</a></li>" %
             (nb_path, title))
 
     return '\n'.join(toc)
