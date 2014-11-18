@@ -12,8 +12,6 @@
 from glob import glob
 from os.path import splitext
 
-__version__ = "0.0.0-dev"
-
 def cookbook_toc():
     """Generate HTML string of the cookbook Table of Contents
     """
