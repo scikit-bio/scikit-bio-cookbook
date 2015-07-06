@@ -12,7 +12,7 @@ before_install:
   # Update conda itself
   - conda update --yes conda
 install:
-  - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas IPython
+  - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas ipython-notebook
   - source activate env_name
   - pip install scikit-bio runipy six requests
 script:
