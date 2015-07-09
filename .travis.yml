@@ -14,7 +14,6 @@ before_install:
 install:
   - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas ipython-notebook
   - source activate env_name
-  - pip install runipy six requests
-  - pip install git+git://github.com/gregcaporaso/scikit-bio.git@cookbook-fixes
+  - pip install scikit-bio runipy six requests
 script:
   - python runipynbs.py
