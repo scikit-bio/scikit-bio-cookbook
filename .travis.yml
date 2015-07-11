@@ -14,6 +14,6 @@ before_install:
 install:
   - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas ipython-notebook pyqt scikit-learn
   - source activate env_name
-  - pip install scikit-bio runipy six requests ete2
+  - pip install scikit-bio runipy six requests ete2 qiime_default_reference
 script:
   - python runipynbs.py
