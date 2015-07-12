@@ -14,7 +14,8 @@ before_install:
 install:
   - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas ipython-notebook pyqt scikit-learn
   - source activate env_name
-  - pip install scikit-bio runipy six requests ete2 qiime_default_reference
+  - pip install scikit-bio runipy six requests qiime_default_reference
+  - pip install https://github.com/jhcepas/ete/archive/3.0.zip
 
 before_script:
   - "export DISPLAY=:99.0"
