@@ -2,18 +2,17 @@
 # from https://github.com/biocore/scikit-bio/blob/master/.travis.yml
 language: python
 python:
-  - "2.7"
-  - "3.4"
+  - "3.5"
 before_install:
-  - wget http://repo.continuum.io/miniconda/Miniconda-2.2.2-Linux-x86_64.sh -O miniconda.sh
+  - wget http://repo.continuum.io/miniconda/Miniconda3-3.7.3-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
-  - export PATH=/home/travis/anaconda/bin:$PATH
+  - export PATH=/home/travis/miniconda3/bin:$PATH
   # Update conda itself
   - conda update --yes conda
 install:
-  - conda create --yes -n env_name python=$TRAVIS_PYTHON_VERSION pip numpy scipy matplotlib pandas ipython-notebook
-  - source activate env_name
-  - pip install scikit-bio runipy six requests
+  - conda create --yes -c https://conda.anaconda.org/biocore -n scikit-bio-cookbook python=3.5 scikit-bio=0.5.0 jupyter requests
+  - source activate scikit-bio-cookbook
+  - pip install ete3 runipy
 script:
   - python runipynbs.py
