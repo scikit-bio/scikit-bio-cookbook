@@ -13,6 +13,6 @@ before_install:
 install:
   - conda create --yes -c https://conda.anaconda.org/biocore -n scikit-bio-cookbook python=3.5 scikit-bio=0.5.0 jupyter requests
   - source activate scikit-bio-cookbook
-  - pip install ete3 runipy
+  - pip install ete3 qiime-default-reference runipy
 script:
   - python runipynbs.py
